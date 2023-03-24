@@ -4,7 +4,7 @@ SkySense is a weather app that provides real-time weather information for any lo
 
 ## Demo
 
-**_[Preview of the Weather App]()_**
+**_[Preview of the Weather App](https://zeeshanmukhtar1.github.io/SkySense-Weather-App/)_**
 
 ### Features
 
