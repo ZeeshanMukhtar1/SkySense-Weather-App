@@ -58,6 +58,24 @@ async function checkWeather(city) {
 // Add event listener to search button
 searchBtn.addEventListener('click', (event) => {
   event.preventDefault();
+  if (inputBox.value.trim() === '') {
+    // alert('Please enter a city first!');
+    Toastify({
+      text: 'Please enter a city first!',
+      duration: 3000,
+      close: true,
+      gravity: 'top', // `top` or `bottom`
+      position: 'center', // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        // background: 'linear-gradient(to right, #00b09b, #96c93d)',
+        background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)',
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
+    inputBox.focus();
+    return;
+  }
   checkWeather(inputBox.value);
 });
 
@@ -65,6 +83,23 @@ searchBtn.addEventListener('click', (event) => {
 inputBox.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     event.preventDefault();
+    if (inputBox.value.trim() === '') {
+      // alert('Please enter a city first!');
+      Toastify({
+        text: 'Please enter a city first!',
+        duration: 3000,
+        close: true,
+        gravity: 'top',
+        position: 'center',
+        stopOnFocus: true,
+        style: {
+          background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)',
+        },
+        onClick: function () {}, // Callback after click
+      }).showToast();
+      inputBox.focus();
+      return;
+    }
     checkWeather(inputBox.value);
   }
 });
