@@ -13,6 +13,7 @@ SkySense is a weather app that provides real-time weather information for any lo
 - Real-time weather data from OpenWeatherMap API
 - Digital clock that displays the current time
 - Stylish UI design
+- Search by pressing the "Enter" key in addition to clicking the search button
 
 ### Getting Started
 
